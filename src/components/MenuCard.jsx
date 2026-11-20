@@ -1,13 +1,19 @@
 import React from 'react'
 
-const MenuCard = ({}) => {
+const MenuCard = ({
+  icon,
+  name,
+  price,
+  tag='기본'
+
+}) => {
   return (
     <li className='menu-item'>
-      <span className="tag"></span>
-      <p className="menu-icon"></p>
-      <h3></h3>
+      <span className="tag">{tag}</span>
+      <p className="menu-icon">{icon}</p>
+      <h3>{name}</h3>
       <p className="price">
-        {/* {price.toLocaleString()} */}
+        {price}원
       </p>
       <button className='btn-cart'>담기</button>
     </li>

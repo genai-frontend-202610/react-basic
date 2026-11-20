@@ -20,18 +20,19 @@ const Menu = () => {
       icon:'🥯',
       name:'플레인 베이글',
       price:3000,
-    },
+    }
   ]
 
   return (
-    <nav>
+    <section className='menu'>
       <h2>오늘의 빵</h2>
       <ul className="list">
       {/* MenuCard뿌려주기 데이터 전달하기*/}
-      <MenuCard/>
-
+        {menus.map((menu,i)=>(
+          <MenuCard key={i} {...menu}/>
+        ))}
       </ul>
-    </nav>
+    </section>
   )
 }
 
